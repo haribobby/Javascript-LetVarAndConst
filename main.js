@@ -1,11 +1,39 @@
-// Declaration and Initialization
+// function sayHello()
+// {
+
+//     // alert('hello...');
+//     // console.log('Hello Java Script');
+//     a =100;
+// }
+
+//  sayHello();
+
+//  console.log(a);
+
+// function f1() {
+//   var n = 999;
+//   function f2() {
+//     alert(n); // 999
+//   }
+//   f2();
+// }
+// f1();
+
+//1. Declaration and Initialization
 // user=5;//?
 // var user=10;//?
 // let user2=20;//?
 // const user3=30;//?
 // console.log(user3);
 
-// Scope (Local, Global , Block)
+// for (var index = 0; index < 5; index++) {
+
+//     console.log(index);
+// }
+
+// console.log("outside.... "+index);
+
+//2. Scope (Local, Global , Block)
 // var test=20;
 // let sample="check";
 // const sample2="check2";
@@ -26,7 +54,7 @@
 // variableTest();
 // console.log(test,test3);
 
-// Redeclaration
+//3. Redeclaration
 // var declare="sample";
 // var declare="value changed";
 // declare="again changed";
@@ -34,12 +62,7 @@
 // const declare=10;
 // console.log(declare);
 
-
-
-
-
-
-// Reinitialization for primitive data types
+// 4. Reinitialization for primitive data types
 // var add=10;
 // add=20;
 // add=30;
@@ -49,19 +72,28 @@
 // pi=10;
 // console.log(pi);
 
+//5. Spread Operator
+// [...a, ...b] // bad :-(
+// a.concat(b) // good :-)
 
+// [x, y].concat(a) // bad :-(
+// [x, y, ...a]    // good :-)
 
+// let arr = [1,2,3];
+// let arr2 = [4,5];
 
+// arr = arr.concat(arr2);
 
+// console.log(arr); // [ 1, 2, 3, 4, 5 ]
+//
+// let arr = [1,2,3];
+// let arr2 = [4,5];
 
+// arr = [...arr,...arr2];
 
+// console.log(arr); // [ 1, 2, 3, 4, 5 ]
 
-
-
-
-
-
-// Reinitialization for reference data types
+// 6. Reinitialization for reference data types
 // const students=[1,2,3,4,5];
 // students.push(6);
 // const teachers=[...students];
@@ -69,26 +101,23 @@
 // console.log(teachers);
 // console.log(students);
 
-
-
-// const user={name:"Venkatesh"};
-// user.age=20;
+// const user={name:"Hari"};
+// user.age=25;
 // const admin=JSON.parse(JSON.stringify(user));
 // admin.age=30;
 // console.log(admin);
 // console.log(user);
 
-
-// var student = "Venkatesh";
-// let mobile="Redme Note7";
+// var student = "Hari";
+// let mobile="Iphone 12 Max Pro";
 
 // data_type     variable      value
-// var           student       Venkatesh
-// let           mobile        Redme Note7
+// var           student       Hari
+// let           mobile        Iphone 12 Max Pro
 // const        students       10001
 // const         user          10002
 // const        teachers       10001
 
 // reference_number     value
 // 10001                [1,2,3,4,5]
-// 10002                {name:"Venkatesh"}
+// 10002                {name:"Hari"}
