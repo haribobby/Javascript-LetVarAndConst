@@ -56,10 +56,10 @@
 
 //3. Redeclaration
 // var declare="sample";
-// var declare="value changed";
+// //var declare="value changed";
 // declare="again changed";
 // let declare=5;
-// const declare=10;
+//const declare=10;
 // console.log(declare);
 
 // 4. Reinitialization for primitive data types
@@ -79,29 +79,69 @@
 // [x, y].concat(a) // bad :-(
 // [x, y, ...a]    // good :-)
 
-// let arr = [1,2,3];
+// let arr1 = [1,2,3];
 // let arr2 = [4,5];
 
-// arr = arr.concat(arr2);
+// let arr = arr1.concat(arr2);
 
 // console.log(arr); // [ 1, 2, 3, 4, 5 ]
 //
-// let arr = [1,2,3];
-// let arr2 = [4,5];
+// let arr1 = [1,2,3];
+// let arr2 = [4,5,6];
 
-// arr = [...arr,...arr2];
+// let arr = [...arr1,...arr2];
 
-// console.log(arr); // [ 1, 2, 3, 4, 5 ]
+// console.log(arr); // [ 1, 2, 3, 4, 5, 6 ]
 
 // 6. Reinitialization for reference data types
-// const students=[1,2,3,4,5];
-// students.push(6);
+
+
+// const a  = 3; //primitive
+// a = a+3;
+
+
+// var arr1 = [6,7];
+// const arr = [1,2,3,4,5]; //array object
+// //we can't re-assign
+// // arr = arr1;
+
+// arr.push(6);
+
+// arr.forEach(val => console.log(val));
+//console.log(arr);
+
+
+
+
+//var arr=[1,2,3,4,5,6];
+//const students=[1,2,3,4,5];
+//students.push(6);
+
+//students = arr;
+
+//console.log(students);
+
 // const teachers=[...students];
 // teachers.push(7);
-// console.log(teachers);
-// console.log(students);
+//console.log(teachers);
 
-// const user={name:"Hari"};
+// var obj = new Object();
+// var obj  = [{},{},{}];
+
+// objects 
+var employee = {
+   id : 1,
+   name: "emp1",
+   desg: "ASE"
+}
+
+
+var employeearr =[ {id : 1,name: "emp1",desg: "ASE1" },{id : 1,name: "emp1",desg: "ASE2" },{id : 1,name: "emp1",desg: "ASE3" }];
+
+console.log(employeearr[2].desg);
+
+
+// const user={name:"optum"};
 // user.age=25;
 // const admin=JSON.parse(JSON.stringify(user));
 // admin.age=30;
@@ -110,14 +150,3 @@
 
 // var student = "Hari";
 // let mobile="Iphone 12 Max Pro";
-
-// data_type     variable      value
-// var           student       Hari
-// let           mobile        Iphone 12 Max Pro
-// const        students       10001
-// const         user          10002
-// const        teachers       10001
-
-// reference_number     value
-// 10001                [1,2,3,4,5]
-// 10002                {name:"Hari"}
