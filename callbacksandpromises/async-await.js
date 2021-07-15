@@ -1,6 +1,33 @@
-function step1(value, error) {
+function step1(value, flag) {
 	return new Promise((resolve, reject) => {
-		if (!error) {
+		if (!flag) {
+			resolve(value + 10);
+		} else {
+			reject('Something wrong');
+		}
+	});
+}
+function step2(value, flag) {
+	return new Promise((resolve, reject) => {
+		if (!flag) {
+			resolve(value + 10);
+		} else {
+			reject('Something wrong');
+		}
+	});
+}
+function step3(value, flag) {
+	return new Promise((resolve, reject) => {
+		if (!flag) {
+			resolve(value + 10);
+		} else {
+			reject('Something wrong');
+		}
+	});
+}
+function step4(value, flag) {
+	return new Promise((resolve, reject) => {
+		if (!flag) {
 			resolve(value + 10);
 		} else {
 			reject('Something wrong');
@@ -8,13 +35,12 @@ function step1(value, error) {
 	});
 }
 async function result() {
-	let result1 = await step1(10, true);
-	console.log(result1);
-	return result1;
+	let result1 = await step1(10, false);
+	let result2 = await step2(result1, false);
+	let result3 = await step3(result2, false);
+	let result4 = await step4(result3, false);
+	return result4;
 }
-async function result2() {
-	let result = await Promise.resolve(5);
-	return result;
-}
-// console.log(result());
+
+
 result().then((result) => console.log(result)).catch((error) => console.log(error));

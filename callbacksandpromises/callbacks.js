@@ -45,3 +45,11 @@
 // }
 
 // func1(func2);
+
+
+// func1 -> func2 -> fun3 -> fun4
+
+
+// promise -> Succesed get something -> fail do something
+
+//            resolve                   reject

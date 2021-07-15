@@ -1,44 +1,47 @@
-function step1(value, error) {
+function step1(value, falg) {
 	return new Promise((resolve, reject) => {
-		if (!error) {
-			resolve(value + 10);
+		if (!falg) {
+			resolve(value + 10); // fullfilling the prmise
 		} else {
-			reject('Something went wrong');
+			reject('Something went wrong 1');
 		}
 	});
 }
 
-function step2(value, error) {
+function step2(value, falg) {
 	return new Promise((resolve, reject) => {
-		if (!error) {
+		if (!falg) {
 			resolve(value + 10);
 		} else {
-			reject('Something went wrong');
+			reject('Something went wrong 2');
 		}
 	});
 }
 
-function step3(value, error) {
+function step3(value, falg) {
 	return new Promise((resolve, reject) => {
-		if (!error) {
+		if (!falg) {
 			resolve(value + 10);
 		} else {
-			reject('Something went wrong');
+			reject('Something went wrong 3');
 		}
 	});
 }
-// step1(10, false)
-// 	.then((result1) => step2(result1, false))
-// 	.then((result2) => step3(result2, false))
-// 	.then((result3) => console.log(result3))
-// 	.catch((error) => console.log(error));
+step1(10, false)
+	.then((result1) => step2(result1, true)) 
+	.then((result2) => step3(result2, false))
+	.then((result3) => console.log(result3))
+	.catch((error) => console.log("#### "+error));
 
-const p1 = Promise.resolve('Like If you understood callbacks');
-// const p2 = Promise.reject('Rejected');
-const p3 = 100;
-const p4 = new Promise((resolve, reject) => {
-	setTimeout(resolve, 1000, 'Subscribe for more updates');
-});
+
+
+// const p1 = Promise.resolve('Like If you understood callbacks');
+
+// // const p2 = Promise.reject('Rejected');
+// const p3 = 100;
+// const p4 = new Promise((resolve, reject) => {
+// 	setTimeout(resolve, 1000, 'Subscribe for more updates');
+// });
 
 // Promise.all([ p1, p3, p4 ]).then((values) => console.log(values)); //either all resolved or any of to be rejected.
 // Promise.race([ p3, p1, p3 ]).then((value) => console.log(value)); //which is first resolved or rejected.
